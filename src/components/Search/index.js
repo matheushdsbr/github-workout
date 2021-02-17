@@ -1,10 +1,11 @@
 import React from 'react';
 import { SearchContainer } from './styles';
+import InputField from '../Input';
 
 const Search = () => (
   <div>
     <SearchContainer>
-      <h1>Search</h1>
+      <InputField placeholder="Search GitHub user..." name="username" />
     </SearchContainer>
   </div>
 );
