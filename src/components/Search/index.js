@@ -6,6 +6,17 @@ import StandardButton from '../Button';
 
 const Search = () => {
   const [searchValue, setSearchValue] = useState('');
+  const [avatar, setAvatar] = useState('');
+  const [nameFull, setNameFull] = useState('');
+  const [userBio, setUserBio] = useState('');
+  const [userUrl, setUserUrl] = useState('');
+
+  const userData = ({ name, bio, ...data }) => {
+    setAvatar(data.avatar_url);
+    setNameFull(name);
+    setUserBio(bio);
+    setUserUrl(data.html_url);
+  };
 
   const handleSearch = (event) => {
     setSearchValue(event.target.value);
@@ -17,7 +28,7 @@ const Search = () => {
       `https://api.github.com/users/${searchValue}`,
     );
     const data = await dataResponse.json();
-    console.log(data);
+    return userData(data);
   };
 
   return (
@@ -30,6 +41,12 @@ const Search = () => {
         />
         <StandardButton type="submit">Search</StandardButton>
       </FormField>
+      <img src={avatar} alt="" />
+      <p>{nameFull}</p>
+      <p>{userBio}</p>
+      <a href={userUrl} target="_blank" rel="noreferrer">
+        Link Repos
+      </a>
     </SearchContainer>
   );
 };
