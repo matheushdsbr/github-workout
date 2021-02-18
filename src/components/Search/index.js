@@ -10,8 +10,10 @@ const Search = () => {
   const [nameFull, setNameFull] = useState('');
   const [userBio, setUserBio] = useState('');
   const [userUrl, setUserUrl] = useState('');
+  const [userError, setUserError] = useState(false);
 
   const userData = ({ name, bio, ...data }) => {
+    setUserError(false);
     setAvatar(data.avatar_url);
     setNameFull(name);
     setUserBio(bio);
@@ -24,11 +26,9 @@ const Search = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    const dataResponse = await fetch(
-      `https://api.github.com/users/${searchValue}`,
-    );
-    const data = await dataResponse.json();
-    return userData(data);
+    fetch(`https://api.github.com/users/${searchValue}`)
+      .then((response) => response.json())
+      .then((data) => (data.message ? setUserError(true) : userData(data)));
   };
 
   return (
@@ -41,12 +41,24 @@ const Search = () => {
         />
         <StandardButton type="submit">Search</StandardButton>
       </FormField>
-      <img src={avatar} alt="" />
-      <p>{nameFull}</p>
-      <p>{userBio}</p>
-      <a href={userUrl} target="_blank" rel="noreferrer">
-        Link Repos
-      </a>
+      {userError ? (
+        <p>User Not Found!</p>
+      ) : (
+        <>
+          {nameFull === '' ? (
+            <></>
+          ) : (
+            <>
+              <img src={avatar} alt="" />
+              <p>{nameFull}</p>
+              <p>{userBio}</p>
+              <a href={userUrl} target="_blank" rel="noreferrer">
+                Link Repos
+              </a>
+            </>
+          )}
+        </>
+      )}
     </SearchContainer>
   );
 };
