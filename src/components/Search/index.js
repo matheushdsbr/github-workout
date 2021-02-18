@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import { SearchContainer } from './styles';
 import FormField from '../Form';
-import InputField from '../Input';
-import StandardButton from '../Button';
 import ResultSearch from '../ResultSearch';
 
 const Search = () => {
@@ -35,34 +33,35 @@ const Search = () => {
   };
 
   return (
-    <SearchContainer>
-      <FormField onSubmit={handleSubmit}>
-        <InputField
-          placeholder="Search GitHub user..."
-          name="username"
-          onChange={handleSearch}
-        />
-        <StandardButton type="submit">Search</StandardButton>
-      </FormField>
-      {userError ? (
-        <p>User Not Found!</p>
-      ) : (
-        <>
-          {userName === '' ? (
-            <></>
+    <div className="container">
+      <div className="row">
+        <SearchContainer className="col-12">
+          <FormField
+            onSubmit={handleSubmit}
+            name="username"
+            onChange={handleSearch}
+          />
+          {userError ? (
+            <p>User Not Found!</p>
           ) : (
-            <ResultSearch
-              src={avatar}
-              userName={userName}
-              userBio={userBio}
-              href={userUrl}
-              login={login}
-              resetRepos={resetRepos}
-            />
+            <>
+              {userName === '' ? (
+                <></>
+              ) : (
+                <ResultSearch
+                  src={avatar}
+                  userName={userName}
+                  userBio={userBio}
+                  href={userUrl}
+                  login={login}
+                  resetRepos={resetRepos}
+                />
+              )}
+            </>
           )}
-        </>
-      )}
-    </SearchContainer>
+        </SearchContainer>
+      </div>
+    </div>
   );
 };
 
