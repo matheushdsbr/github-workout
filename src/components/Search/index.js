@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { SearchContainer } from './styles';
+import FormField from '../Form';
 import InputField from '../Input';
 import StandardButton from '../Button';
 
@@ -10,18 +11,26 @@ const Search = () => {
     setSearchValue(event.target.value);
   };
 
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    const dataResponse = await fetch(
+      `https://api.github.com/users/${searchValue}`,
+    );
+    const data = await dataResponse.json();
+    console.log(data);
+  };
+
   return (
-    <div>
-      <SearchContainer>
+    <SearchContainer>
+      <FormField onSubmit={handleSubmit}>
         <InputField
           placeholder="Search GitHub user..."
           name="username"
           onChange={handleSearch}
         />
-        <StandardButton type="button">Search</StandardButton>
-        <p>{searchValue}</p>
-      </SearchContainer>
-    </div>
+        <StandardButton type="submit">Search</StandardButton>
+      </FormField>
+    </SearchContainer>
   );
 };
 
