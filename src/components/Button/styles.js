@@ -1,5 +1,5 @@
 import styled from 'styled-components';
 
-export const StandardButton = styled.button`
+export const ButtonField = styled.button`
   background: red;
 `;

@@ -1,8 +1,10 @@
 import React from 'react';
-import { StandardButton } from './styles';
+import { ButtonField } from './styles';
 
-const Button = ({ type, children }) => (
-  <StandardButton type={type}>{children}</StandardButton>
+const Button = ({ type, handle, children }) => (
+  <ButtonField type={type} onClick={handle}>
+    {children}
+  </ButtonField>
 );
 
 export default Button;
