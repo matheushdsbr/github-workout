@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import colors from '../../tokens/colors';
 
 export const FormField = styled.form`
   position: relative;
@@ -16,8 +17,8 @@ export const SVGSearch = styled.img`
 export const InputField = styled.input`
   width: 100%;
   border-radius: 12px;
-  border: 1px solid #bdbdbd;
-  color: #454550;
+  border: 1px solid ${colors.gray[0]};
+  color: ${colors.dark};
   height: 12px;
   outline: none;
   transition: all 0.2s ease-out;
@@ -25,12 +26,12 @@ export const InputField = styled.input`
   padding-left: 60px;
 
   &:focus {
-    border: 1px solid #1FB5FF;
+    border: 1px solid ${colors.primary};
   }
 
   &:focus ~ label,
   &:valid ~ label {
-    color: #1FB5FF;
+    color: ${colors.primary};
     padding: 0px 8px;
     top: -22px;
   }
@@ -39,7 +40,7 @@ export const InputField = styled.input`
 export const LabelField = styled.label`
   background: white;
   border-radius: 12px;
-  color: #bdbdbd;
+  color: ${colors.gray[0]};
   cursor: text;
   left: 0;
   margin-left: 54px;

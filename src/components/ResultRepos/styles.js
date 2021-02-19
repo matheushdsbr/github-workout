@@ -1,13 +1,14 @@
 import styled from 'styled-components';
+import colors from '../../tokens/colors';
 
 export const ContainerResult = styled.li`
   margin-bottom: 5px;
   padding-bottom: 10px;
-  border-bottom: 1px solid #888888;
+  border-bottom: 1px solid ${colors.gray[1]};
 `;
 
 export const Title = styled.p`
-  color: #222222;
+  color: ${colors.dark};
   font-weight: 500;
   margin-bottom: 6px;
 `;
@@ -15,7 +16,7 @@ export const Title = styled.p`
 export const TextDescription = styled.p``;
 
 export const Link = styled.a`
-  color: #1fb5ff;
+  color: ${colors.primary};
   text-decoration: none;
 
   &::after {
@@ -23,7 +24,7 @@ export const Link = styled.a`
     display: block;
     width: 0;
     height: 2px;
-    background: #1fb5ff;
+    background: ${colors.primary};
     transition: width 0.2s;
   }
 
@@ -33,7 +34,7 @@ export const Link = styled.a`
 
   &:hover {
     cursor: pointer;
-    color: #1fb5ff;
+    color: ${colors.primary};
     text-decoration: none;
   }
 `;

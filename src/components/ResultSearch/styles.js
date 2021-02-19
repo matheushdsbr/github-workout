@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import colors from '../../tokens/colors';
 
 export const Container = styled.div`
   margin-top: 30px;
@@ -18,16 +19,16 @@ export const Image = styled.img`
 `;
 
 export const Title = styled.p`
-  color: #222222;
+  color: ${colors.dark};
   font-weight: 500;
 `;
 
 export const Text = styled.p`
-  color: #888888;
+  color: ${colors.gray[1]};
 `;
 
 export const Link = styled.a`
-  color: #1fb5ff;
+  color: ${colors.primary};
   text-decoration: none;
 
   &::after {
@@ -35,7 +36,7 @@ export const Link = styled.a`
     display: block;
     width: 0;
     height: 2px;
-    background: #1fb5ff;
+    background: ${colors.primary};
     transition: width 0.2s;
   }
 
@@ -45,7 +46,7 @@ export const Link = styled.a`
 
   &:hover {
     cursor: pointer;
-    color: #1fb5ff;
+    color: ${colors.primary};
     text-decoration: none;
   }
 `;

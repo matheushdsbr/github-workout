@@ -1,17 +1,18 @@
 import styled from 'styled-components';
+import colors from '../../tokens/colors';
 
 export const ButtonField = styled.button`
   background: white;
-  color: #222222;
+  color: ${colors.dark};
   font-weight: 500;
-  border: 1px solid #1fb5ff;
+  border: 1px solid ${colors.primary};
   border-radius: 8px;
   padding: 7px 25px;
   cursor: pointer;
   transition-duration: 0.5s;
 
   &:focus {
-    background: #1fb5ff;
-    color: #ffffff;
+    background: ${colors.primary};
+    color: ${colors.white};
   }
 `;
