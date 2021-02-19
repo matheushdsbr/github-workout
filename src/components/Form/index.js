@@ -1,10 +1,10 @@
 import React from 'react';
-import { FormField, InputField, LabelField } from './styles';
-import StandardButton from '../Button';
+import { FormField, SVGSearch, InputField, LabelField } from './styles';
 
 const Form = ({ onSubmit, name, onChange }) => (
   <>
     <FormField onSubmit={onSubmit}>
+      <SVGSearch src="/search.svg" alt="Search" />
       <InputField
         id="username"
         name={name}
@@ -12,8 +12,6 @@ const Form = ({ onSubmit, name, onChange }) => (
         required="required"
       />
       <LabelField htmlFor="username">Search GitHub user</LabelField>
-
-      <StandardButton type="submit">Search</StandardButton>
     </FormField>
   </>
 );

@@ -6,6 +6,13 @@ export const FormField = styled.form`
   margin-top: 30px;
 `;
 
+export const SVGSearch = styled.img`
+  width: 20px;
+  position: absolute;
+  margin-left: 22px;
+  margin-top: 13px;
+`;
+
 export const InputField = styled.input`
   width: 100%;
   border-radius: 12px;
@@ -14,7 +21,8 @@ export const InputField = styled.input`
   height: 12px;
   outline: none;
   transition: all 0.2s ease-out;
-  padding: 18px;
+  padding: 22px;
+  padding-left: 60px;
 
   &:focus {
     border: 1px solid #2962fb;
@@ -24,7 +32,7 @@ export const InputField = styled.input`
   &:valid ~ label {
     color: #2962fb;
     padding: 0px 8px;
-    top: -19px;
+    top: -22px;
   }
 `;
 
@@ -34,8 +42,8 @@ export const LabelField = styled.label`
   color: #bdbdbd;
   cursor: text;
   left: 0;
-  margin-left: 15px;
-  margin-top: 6px;
+  margin-left: 54px;
+  margin-top: 10px;
   padding: 0px 8px;
   position: absolute;
   top: 0;
