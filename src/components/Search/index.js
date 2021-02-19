@@ -3,6 +3,7 @@ import { SearchContainer } from './styles';
 import NegativeMessage from '../NegativeMessage/index';
 import FormField from '../Form';
 import ResultSearch from '../ResultSearch';
+import Welcome from '../Welcome';
 
 const Search = () => {
   const [login, setLogin] = useState('');
@@ -36,7 +37,7 @@ const Search = () => {
   return (
     <div className="container">
       <div className="row">
-        <SearchContainer className="col-12">
+        <SearchContainer className="col-12 col-md-8 offset-md-2">
           <FormField
             onSubmit={handleSubmit}
             name="username"
@@ -61,6 +62,7 @@ const Search = () => {
             </>
           )}
         </SearchContainer>
+        {userName === '' && <Welcome />}
       </div>
     </div>
   );
