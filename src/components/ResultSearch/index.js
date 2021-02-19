@@ -50,8 +50,12 @@ const ResultSearch = ({ src, userName, userBio, href, login }) => {
       </ContainerUser>
 
       <ContainerButton>
-        <ButtonField onClick={handleRepos}>Repositories</ButtonField>
-        <ButtonField onClick={handleStarred}>Starred repositories</ButtonField>
+        <ButtonField type="button" onClick={handleRepos}>
+          Repositories
+        </ButtonField>
+        <ButtonField type="button" onClick={handleStarred}>
+          Starred repositories
+        </ButtonField>
       </ContainerButton>
 
       <>
