@@ -7,7 +7,7 @@ import {
   Text,
   Link,
   ContainerButton,
-  ContainerResultRepos,
+  ListRepos,
 } from './styles';
 import { ButtonField } from '../Button/styles';
 import ResultRepos from '../ResultRepos';
@@ -48,8 +48,8 @@ const ResultSearch = ({ src, userName, userBio, href, login }) => {
       </ContainerUser>
 
       <ContainerButton>
-        <ButtonField onClick={handleRepos}>Repos</ButtonField>
-        <ButtonField onClick={handleStarred}>Starred</ButtonField>
+        <ButtonField onClick={handleRepos}>Repositories</ButtonField>
+        <ButtonField onClick={handleStarred}>Starred repositories</ButtonField>
       </ContainerButton>
 
       <>
@@ -58,14 +58,14 @@ const ResultSearch = ({ src, userName, userBio, href, login }) => {
         ) : (
           <>
             {userDataRepos.map((item) => (
-              <ContainerResultRepos key={item.id}>
+              <ListRepos key={item.id}>
                 <ResultRepos
                   id={item.id}
                   name={item.name}
                   description={item.description}
                   url={item.html_url}
                 />
-              </ContainerResultRepos>
+              </ListRepos>
             ))}
           </>
         )}
