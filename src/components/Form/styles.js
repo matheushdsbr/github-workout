@@ -5,7 +5,6 @@ import LogoSvg from '../../../public/search.svg';
 
 export const SVG = styled(LogoSvg)`
   fill: ${colors.gray[0]};
-  width: 20px;
   position: absolute;
   left: 22px;
   top: 50%;
