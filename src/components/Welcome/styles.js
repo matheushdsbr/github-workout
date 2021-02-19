@@ -15,7 +15,7 @@ export const ContainerWelcome = styled.div`
 `;
 
 export const TitleWelcome = styled.h1`
-  color: ${colors.dark};
+  color: ${colors.primary};
   font-size: ${FontSizes.xlarge};
 
   ${media.sm} {
@@ -25,7 +25,7 @@ export const TitleWelcome = styled.h1`
 
 export const SubTitleWelcome = styled.p`
   font-size: ${FontSizes.medium};
-  color: ${colors.primary};
+  color: ${colors.dark};
 
   ${media.sm} {
     font-size: ${FontSizes.xlarge};
