@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import {
   Container,
+  ContainerUser,
   Image,
+  Title,
   Text,
   Link,
   ContainerButton,
@@ -36,12 +38,14 @@ const ResultSearch = ({ src, userName, userBio, href, login }) => {
 
   return (
     <Container>
-      <Image src={src} alt="User Image" />
-      <Text>{userName}</Text>
-      <Text>{userBio}</Text>
-      <Link href={href} target="_blank">
-        Link Repos
-      </Link>
+      <ContainerUser>
+        <Image src={src} alt="User Image" />
+        <Title>{userName}</Title>
+        <Text>{userBio}</Text>
+        <Link href={href} target="_blank">
+          Link Repos
+        </Link>
+      </ContainerUser>
 
       <ContainerButton>
         <ButtonField onClick={handleRepos}>Repos</ButtonField>
