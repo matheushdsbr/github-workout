@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import colors from '../../tokens/colors';
+import fontSizes from '../../tokens/font-size';
 
 export const Container = styled.div`
   margin-top: 30px;
@@ -21,6 +22,7 @@ export const Image = styled.img`
 export const Title = styled.p`
   color: ${colors.dark};
   font-weight: 500;
+  font-size: ${fontSizes.large};
 `;
 
 export const Text = styled.p`
