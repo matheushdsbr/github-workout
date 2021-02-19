@@ -43,7 +43,7 @@ const ResultSearch = ({ src, userName, userBio, href, login }) => {
         <Title>{userName}</Title>
         <Text>{userBio}</Text>
         <Link href={href} target="_blank">
-          Link Repos
+          Link Profile
         </Link>
       </ContainerUser>
 
