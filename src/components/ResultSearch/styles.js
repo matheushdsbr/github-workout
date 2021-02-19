@@ -20,7 +20,7 @@ export const Image = styled.img`
   margin-bottom: 20px;
 
   ${media.md} {
-    width: 25%;
+    width: 40%;
   }
 `;
 
@@ -71,7 +71,7 @@ export const Link = styled.a`
 
 export const ContainerButton = styled.div`
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   margin-bottom: 30px;
   ${media.md} {
     margin-bottom: 45px;
@@ -79,7 +79,6 @@ export const ContainerButton = styled.div`
 `;
 
 export const ContainerList = styled.div`
-  width: 50%;
   margin: auto;
 `;
 
