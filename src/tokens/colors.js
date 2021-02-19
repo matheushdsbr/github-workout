@@ -1,6 +1,6 @@
 const white = '#FFFFFF';
 const dark = '#41414A';
-const gray = '#888888';
+const gray = ['#C5C5D6', '#888888'];
 const primary = '#1968C9';
 const negative = '#CB3530';
 
