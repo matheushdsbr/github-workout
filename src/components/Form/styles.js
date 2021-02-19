@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import colors from '../../tokens/colors';
+import fontSizes from '../../tokens/font-size';
 
 export const FormField = styled.form`
   position: relative;
@@ -34,6 +35,7 @@ export const InputField = styled.input`
     color: ${colors.primary};
     padding: 0px 8px;
     top: -22px;
+    font-size: ${fontSizes.small};
   }
 `;
 
