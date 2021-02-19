@@ -1,10 +1,10 @@
 import styled from 'styled-components';
 import colors from '../../tokens/colors';
+import fontSizes from '../../tokens/font-size';
 
 export const ContainerResult = styled.li`
-  margin-bottom: 5px;
-  padding-bottom: 10px;
-  border-bottom: 1px solid ${colors.gray[1]};
+  padding-bottom: 20px;
+  border-bottom: 1px solid ${colors.gray[0]};
 `;
 
 export const Title = styled.p`
@@ -13,28 +13,20 @@ export const Title = styled.p`
   margin-bottom: 6px;
 `;
 
-export const TextDescription = styled.p``;
+export const TextDescription = styled.p`
+  color: ${colors.gray[1]};
+  font-size: ${fontSizes.small};
+`;
 
 export const Link = styled.a`
+  display: inline-block;
   color: ${colors.primary};
-  text-decoration: none;
-
-  &::after {
-    content: '';
-    display: block;
-    width: 0;
-    height: 2px;
-    background: ${colors.primary};
-    transition: width 0.2s;
-  }
-
-  &:hover::after {
-    width: 100%;
-  }
+  font-weight: 500;
+  margin-bottom: 0;
 
   &:hover {
     cursor: pointer;
     color: ${colors.primary};
-    text-decoration: none;
+    font-weight: 500;
   }
 `;
