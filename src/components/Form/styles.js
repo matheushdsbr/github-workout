@@ -1,18 +1,21 @@
 import styled from 'styled-components';
 import colors from '../../tokens/colors';
 import fontSizes from '../../tokens/font-size';
+import LogoSvg from '../../../public/search.svg';
+
+export const SVG = styled(LogoSvg)`
+  fill: ${colors.gray[0]};
+  width: 20px;
+  position: absolute;
+  left: 22px;
+  top: 50%;
+  transform: translateY(-50%);
+`;
 
 export const FormField = styled.form`
   position: relative;
   width: 100%;
   margin-top: 30px;
-`;
-
-export const SVGSearch = styled.img`
-  width: 20px;
-  position: absolute;
-  margin-left: 22px;
-  margin-top: 13px;
 `;
 
 export const InputField = styled.input`
@@ -25,6 +28,10 @@ export const InputField = styled.input`
   transition: all 0.2s ease-out;
   padding: 22px;
   padding-left: 60px;
+
+  &:focus + ${SVG} {
+    fill: ${colors.primary};
+  }
 
   &:focus {
     border: 1px solid ${colors.primary};
