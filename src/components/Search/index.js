@@ -37,31 +37,33 @@ const Search = () => {
   return (
     <div className="container">
       <div className="row">
-        <SearchContainer className="col-12 col-md-8 offset-md-2">
-          <FormField
-            onSubmit={handleSubmit}
-            name="username"
-            onChange={handleSearch}
-          />
-          {userError ? (
-            <NegativeMessage>User not found!!</NegativeMessage>
-          ) : (
-            <>
-              {userName === '' ? (
-                <></>
-              ) : (
-                <ResultSearch
-                  src={avatar}
-                  userName={userName}
-                  userBio={userBio}
-                  href={userUrl}
-                  login={login}
-                  resetRepos={resetRepos}
-                />
-              )}
-            </>
-          )}
-        </SearchContainer>
+        <div className="col-12 col-md-8 offset-md-2">
+          <SearchContainer>
+            <FormField
+              onSubmit={handleSubmit}
+              name="username"
+              onChange={handleSearch}
+            />
+            {userError ? (
+              <NegativeMessage>User not found!!</NegativeMessage>
+            ) : (
+              <>
+                {userName === '' ? (
+                  <></>
+                ) : (
+                  <ResultSearch
+                    src={avatar}
+                    userName={userName}
+                    userBio={userBio}
+                    href={userUrl}
+                    login={login}
+                    resetRepos={resetRepos}
+                  />
+                )}
+              </>
+            )}
+          </SearchContainer>
+        </div>
         {userName === '' && <Welcome />}
       </div>
     </div>
