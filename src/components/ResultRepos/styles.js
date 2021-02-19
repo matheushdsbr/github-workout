@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import colors from '../../tokens/colors';
 import fontSizes from '../../tokens/font-size';
+import media from '../../tokens/media';
 
 export const ContainerResult = styled.li`
   padding-bottom: 20px;
@@ -13,11 +14,6 @@ export const Title = styled.p`
   margin-bottom: 6px;
 `;
 
-export const TextDescription = styled.p`
-  color: ${colors.gray[1]};
-  font-size: ${fontSizes.small};
-`;
-
 export const Link = styled.a`
   display: inline-block;
   color: ${colors.primary};
@@ -28,5 +24,18 @@ export const Link = styled.a`
     cursor: pointer;
     color: ${colors.primary};
     font-weight: 500;
+  }
+
+  ${media.md} {
+    font-size: ${fontSizes.large};
+  }
+`;
+
+export const TextDescription = styled.p`
+  color: ${colors.gray[1]};
+  font-size: ${fontSizes.small};
+
+  ${media.md} {
+    font-size: ${fontSizes.medium};
   }
 `;
