@@ -7,6 +7,7 @@ import {
   Text,
   Link,
   ContainerButton,
+  ContainerList,
   ListRepos,
 } from './styles';
 import { ButtonField } from '../Button/styles';
@@ -56,7 +57,7 @@ const ResultSearch = ({ src, userName, userBio, href, login }) => {
         {errorRepos ? (
           <p>Repos not Found!!</p>
         ) : (
-          <>
+          <ContainerList>
             {userDataRepos.map((item) => (
               <ListRepos key={item.id}>
                 <ResultRepos
@@ -67,7 +68,7 @@ const ResultSearch = ({ src, userName, userBio, href, login }) => {
                 />
               </ListRepos>
             ))}
-          </>
+          </ContainerList>
         )}
       </>
     </Container>
