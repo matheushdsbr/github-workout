@@ -25,12 +25,12 @@ export const InputField = styled.input`
   padding-left: 60px;
 
   &:focus {
-    border: 1px solid #2962fb;
+    border: 1px solid #1FB5FF;
   }
 
   &:focus ~ label,
   &:valid ~ label {
-    color: #2962fb;
+    color: #1FB5FF;
     padding: 0px 8px;
     top: -22px;
   }
