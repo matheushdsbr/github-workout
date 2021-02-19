@@ -58,4 +58,5 @@ export const ContainerButton = styled.div`
 
 export const ListRepos = styled.ul`
   list-style-type: none;
+  padding: 0;
 `;
