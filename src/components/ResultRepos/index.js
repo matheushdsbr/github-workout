@@ -1,13 +1,12 @@
 import React from 'react';
-import { Text, Link } from './styles';
+import { ContainerResult, Title, TextDescription, Link } from './styles';
 
 const ResultRepos = ({ name, description, url }) => (
-  <li>
-    <Text>{name}</Text>
-    {description && <Text>{description}</Text>}
+  <ContainerResult>
+    <Title>{name}</Title>
+    {description && <TextDescription>{description}</TextDescription>}
     <Link href={url}>Link to Repos</Link>
-    <hr />
-  </li>
+  </ContainerResult>
 );
 
 export default ResultRepos;
