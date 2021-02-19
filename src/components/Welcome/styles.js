@@ -1,4 +1,6 @@
 import styled from 'styled-components';
+import FontSizes from '../../tokens/font-size';
+import colors from '../../tokens/colors';
 
 export const ContainerWelcome = styled.div`
   position: absolute;
@@ -12,9 +14,11 @@ export const ContainerWelcome = styled.div`
 `;
 
 export const TitleWelcome = styled.h1`
-  font-size: 28px;
+  color: ${colors.dark};
+  font-size: ${FontSizes.xxlarge};
 `;
 
 export const SubTitleWelcome = styled.p`
-  font-size: 18px;
+  font-size: ${FontSizes.large};
+  color: ${colors.primary};
 `;
