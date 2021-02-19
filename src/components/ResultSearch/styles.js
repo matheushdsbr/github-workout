@@ -78,10 +78,6 @@ export const ContainerButton = styled.div`
   }
 `;
 
-export const NagativeMessage = styled.p`
-  color: ${colors.negative};
-`;
-
 export const ContainerList = styled.div`
   width: 50%;
   margin: auto;
