@@ -10,6 +10,7 @@ import {
   ContainerList,
   ListRepos,
 } from './styles';
+import NegativeMessage from '../NegativeMessage/index';
 import { ButtonField } from '../Button/styles';
 import ResultRepos from '../ResultRepos';
 
@@ -55,7 +56,7 @@ const ResultSearch = ({ src, userName, userBio, href, login }) => {
 
       <>
         {errorRepos ? (
-          <p>Repos not Found!!</p>
+          <NegativeMessage>Repositories not found!!</NegativeMessage>
         ) : (
           <ContainerList>
             {userDataRepos.map((item) => (

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { SearchContainer } from './styles';
+import NegativeMessage from '../NegativeMessage/index';
 import FormField from '../Form';
 import ResultSearch from '../ResultSearch';
 
@@ -42,7 +43,7 @@ const Search = () => {
             onChange={handleSearch}
           />
           {userError ? (
-            <p>User Not Found!</p>
+            <NegativeMessage>User not found!!</NegativeMessage>
           ) : (
             <>
               {userName === '' ? (
